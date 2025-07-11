@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    
+function storeUserData(user) {
+let store = JSON.stringify(user);
+localStorage.setItem("user",store);
+console.log(store);
+console.log("user data stored in local")
+}
+
+// Example usage:
+let user = { name: "Alice", age: 30 };
+storeUserData(user);
+   </script> 
+</body>
+</html>

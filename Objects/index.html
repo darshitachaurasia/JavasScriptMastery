@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+// Function to ask the user for their favorite color
+function askFavoriteColor() {
+let color = prompt("What is your fav Color?")
+if(color){
+confirm(`Is you fav color ${color}?`)
+}else{
+    alert("Give a color")
+}
+
+let changeColor = prompt("Do you want to change color?")
+if(changeColor.toLowerCase()=== "yes"){
+    askFavoriteColor()
+}else{
+    alert("please  enter ")
+}
+}
+
+// Call the function to start the program
+askFavoriteColor();
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+
+function determineDiscount() {
+   let age = prompt("Enter your age");
+   let isVIP = prompt("Write 'VIP' ");
+
+   age = parseInt(age);
+    if (isNaN(age) || age < 0) {
+        console.log("Please enter a valid age.");
+        return;
+    }
+    // Determine the discount
+    let discount = 0;
+   if(isVIP === 'VIP'){
+    dis = 30
+   }else if(age<18){
+    dis = 20
+   }else if(age>=60){
+    dis = 10;
+   }else{
+    dis = 5
+   }
+
+ console.log(`${dis}% discount`)
+}
+
+// Call the function to check the discount
+determineDiscount();
+ 
+    </script>
+</body>
+</html>
