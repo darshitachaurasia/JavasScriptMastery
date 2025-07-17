@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Changer</title>
+</head>
+<body>
+
+    <h1>Current Theme: <span id="current-theme">Loading...</span></h1>
+    <button id="change-theme-button">Change Theme</button>
+
+    <script>
+        
+        // Get the current theme from localStorage or default to 'light'
+        function getTheme() {
+           return localStorage.getItem('theme')
+        }
+
+        // Set the theme in localStorage and update the page
+        function setTheme(theme) {
+          localStorage.setItem('theme',theme)
+          document.body.style.backgroundColor = theme;
+      document.getElementById('current-theme').textContent = theme;
+        }
+
+        // Display the current theme on page load
+        setTheme(getTheme());
+
+        // Prompt the user to change the theme when the button is clicked
+        document.getElementById('change-theme-button').addEventListener('click', function() {
+           let color = prompt("what is your theme color")
+           if (color) {
+        setTheme(color.trim())
+        
+      } else{
+          alert("pls give a color")  
+         }
+        });
+    </script>
+
+</body>
+</html>
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Changer</title>
+</head>
+<body>
+
+    <h1>Current Theme: <span id="current-theme">Loading...</span></h1>
+    <button id="change-theme-button">Change Theme</button>
+
+    <script>
+        // Get the current theme from localStorage or default to 'light'
+        function getTheme() {
+            return localStorage.getItem('theme') || 'light';
+        }
+
+        // Set the theme in localStorage and update the page
+        function setTheme(theme) {
+            localStorage.setItem('theme', theme);
+            document.getElementById('current-theme').textContent = theme;
+            document.body.style.backgroundColor = theme === 'dark' ? '#333' : '#fff';
+            document.body.style.color = theme === 'dark' ? '#fff' : '#000';
+        }
+
+        // Display the current theme on page load
+        setTheme(getTheme());
+
+        // Prompt the user to change the theme when the button is clicked
+        document.getElementById('change-theme-button').addEventListener('click', function() {
+            const newTheme = prompt('Enter a new theme (light or dark):', getTheme());
+            if (newTheme === 'light' || newTheme === 'dark') {
+                setTheme(newTheme);
+            } else {
+                alert('Invalid theme! Please choose "light" or "dark".');
+            }
+        });
+    </script>
+
+</body>
+</html>
+ 
+
+--> 

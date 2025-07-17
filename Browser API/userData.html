@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+function saveUsernameToSessionStorage(username) {
+  sessionStorage.setItem("username",username)
+}
+
+function getUsernameFromSessionStorage() {
+  return  sessionStorage.getItem("username")
+}
+
+// Save data to sessionStorage
+saveUsernameToSessionStorage('Alice');
+
+// Retrieve and display data
+console.log(getUsernameFromSessionStorage()); 
+// Output: Alice
+
+
+    </script>
+</body>
+</html>
