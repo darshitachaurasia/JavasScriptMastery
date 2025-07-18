@@ -14,10 +14,18 @@
   <script>
     function changePage() {
       // Change the URL without reloading the page
-     
+      
       
       // Update the content of the page
-     //code here
+       history.pushState({}, '', '/new-url');
+     
+       const content = document.getElementByID('content')
+
+      
+        
+
+        content.textContent = 'URL Changed'
+       
     }
 
     // Add event listener to button
