@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+let timeout;
+
+function resetTimer() {
+   timeout = setTimeout(() => {
+    clearTimeout('time up')
+   }, 3000);
+}
+
+// Reset timer on any mouse movement
+window.addEventListener('mousemove', resetTimer);
+
+// Reset timer on any key press
+window.addEventListener('keydown', resetTimer);
+
+  
+    </script>
+</body>
+</html>
+
+/** clearTimeout(timeout); // Clear any existing timeout
+    timeout = setTimeout(function() {
+        alert("You have been inactive for 10 seconds!"); // Alert after 10 seconds of inactivity
+    }, 10000);**/
