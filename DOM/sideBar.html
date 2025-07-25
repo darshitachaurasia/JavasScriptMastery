@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collapsible Sidebar</title>
+  <style>
+    #mySidebar {
+      width: 200px;
+      height: 100%;
+      background-color: lightgray;
+      position: fixed;
+      left: -200px;
+      transition: left 0.3s;
+    }
+    #mySidebar.open {
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="mySidebar">Sidebar Content</div>
+  <button id="toggleButton">Toggle Sidebar</button>
+
+  <script>
+   function toggleSidebar(sidebarId) {
+      const sidebar = document.getElementById(sidebarId);
+      sidebar.classList.toggle('open');
+    }
+    document.getElementById('toggleButton').addEventListener('click', () => {
+      toggleSidebar('mySidebar');
+    });
+  </script>
+</body>
+</html>
+
+
+  

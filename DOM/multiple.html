@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Multiple Items</title>
+</head>
+<body>
+  <ul id="todoList"></ul>
+  <button id="addItemsButton">Add Items</button>
+
+  <script>
+    // Function to add multiple items to the list
+    function addMultipleItemsToList(listId, items) {
+    const ul = document.getElementById(listId);
+    
+   
+    for(let i=0;i<items.length;i++){
+        const li = document.createElement('li');
+         li.textContent = items[i]
+         
+         console.log(li)
+          ul.appendChild(li)
+         
+    }
+      
+     
+    }
+
+    // Add event listener to the button
+    const addItemsButton = document.getElementById('addItemsButton');
+    addItemsButton.addEventListener('click', () => {
+      addMultipleItemsToList('todoList', ['Learn JavaScript', 'Practice DOM', 'Build Projects']);
+    });
+  </script>
+</body>
+</html>
+
+  

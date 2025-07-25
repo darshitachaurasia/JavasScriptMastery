@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+   <ul id="todoList">
+    <li>todoList</li>
+    <li>Learn JavaScript</li>
+   </ul>
+  <button onclick="deleteItem('todoList')">Delete Item</button>
+
+  <script>
+    function deleteItem(listId) {
+      const ul = document.getElementById(listId);
+      //use innerHTML method
+      ul.innerHTML = ''
+    }
+    </script>
+</body>
+</html>
+
+  

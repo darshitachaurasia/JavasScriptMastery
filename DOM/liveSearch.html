@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Search</title>
+  <style>
+    #results li {
+      list-style: none;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Live Search Example</h1>
+  <input type="text" id="searchBar" placeholder="Type to search..." />
+  <ul id="results"></ul>
+
+  <script>
+    // Sample list of items
+    const items = ["Apple", "Banana", "Cherry", "Date", "Elderberry", "Fig", "Grape"];
+
+    // Function to perform live search
+    function liveSearch(searchInputId, resultContainerId, items) {
+        const searchBar = document.getElementById("searchBar")
+        const results = document.getElementById("results")
+        items.forEach((item)=>{
+              const li = document.createElement('li');
+      li.textContent = item;
+      results.appendChild(li);
+        })
+    
+    }
+
+    // Initialize live search
+    liveSearch("searchBar", "results", items);
+  </script>
+</body>
+</html>
+
+
+  

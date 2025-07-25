@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Replace List Items</title>
+</head>
+<body>
+  <ul id="todoList">
+    <li>Old Item 1</li>
+    <li>Old Item 2</li>
+    <li>Old Item 3</li>
+  </ul>
+  <button id="replaceItemsButton">Replace Items</button>
+
+  <script>
+    // Function to replace all items in the list
+    function replaceListItems(listId, items) {
+      const list = document.getElementById(listId);
+      items.forEach((item,index)=>{
+        if (list.children[index]) {
+        list.children[index].textContent = item;
+      } else {
+        alert('Index out of range');
+      }
+        
+      })
+      
+        
+      
+    }
+
+    // Add event listener to the button
+    const replaceItemsButton = document.getElementById('replaceItemsButton');
+    replaceItemsButton.addEventListener('click', () => {
+      replaceListItems('todoList', ['New Item 1', 'New Item 2', 'New Item 3']);
+    });
+  </script>
+</body>
+</html>
+
+  

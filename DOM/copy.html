@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copy to Clipboard</title>
+</head>
+<body>
+  <p id="textToCopy">This text will be copied!</p>
+  <button id="copyButton">Copy</button>
+
+  <script>
+    function copyToClipboard(elementId) {
+        //textContent
+       const text = document.getElementById('textToCopy').textContent
+   window.navigator.clipboard.writeText(text).then(() => {
+      alert('Text copied to clipboard!');
+  })
+    }
+
+    document.getElementById('copyButton').addEventListener('click', () => {
+      copyToClipboard('textToCopy');
+    });
+  </script>
+</body>
+</html>
+
+
+  

@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit List Item</title>
+</head>
+<body>
+  <ul id="todoList">
+    <li>Task1</li>
+    <li>Task2</li>
+    <li>Task3</li>
+  </ul>
+  <button id="editItemButton">Edit</button>
+  <script>
+    function editListItem(listId, index, newText) {
+      const ul = getElementById("todoList");
+      for(let index = 1 ; index<3 ; index++){
+        li[index].innerHTML =`${newText}`
+      }
+    }
+
+    document.getElementById('editItemButton').addEventListener('click', () => {
+      editListItem('todoList', 1, 'Learn DOM');
+    });
+  </script>
+</body>
+</html>
+
+<!--
+ function editListItem(listId, index, newText) {
+      const list = document.getElementById(listId);
+      if (list.children[index]) {
+        list.children[index].textContent = newText;
+      } else {
+        alert('Index out of range');
+      }
+-->
+  

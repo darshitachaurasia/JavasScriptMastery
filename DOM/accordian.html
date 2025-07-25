@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <div id="accordion"></div>
+
+  <script>
+    function createAccordion(sections) {
+      const container = document.getElementById("accordion");
+//////////////////////////////////////////////////////////
+      sections.forEach(({ title, content }) => {
+        const header = document.createElement("h3");
+        const body = document.createElement("div");
+
+        header.textContent = title;
+        body.textContent = content;
+        body.style.display = "none";
+
+        header.addEventListener("click", () => {
+          body.style.display = body.style.display === "none" ? "block" : "none";
+        });
+
+        container.appendChild(header);
+        container.appendChild(body);
+    })
+    }
+
+    createAccordion([
+      { title: "Section 1", content: "Content 1" },
+      { title: "Section 2", content: "Content 2" },
+    ]);
+  </script>
+</body>
+</html>
+
+  
