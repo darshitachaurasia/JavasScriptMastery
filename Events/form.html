@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation Example</title>
+</head>
+<body>
+
+  <!-- Form with a text input for the name -->
+  <form id="myForm" >
+    <input type="text" id="name" placeholder="Enter your name" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    // Get the form element by its ID
+    const form = document.getElementById('myForm');
+    const button = document.querySelector('button')
+    
+    button.addEventListener('click',()=>{
+        
+        if(!name){
+        alert("name is required")
+    }
+    form.addEventListener('submit', function(event) {
+      // Get the value of the input field
+      const name = document.getElementById('name').value;
+      
+      // Check if the name is empty
+      if (!name) {
+        // Show an alert if no name is entered
+        alert('Please enter your name');
+        
+        // Prevent the form from being submitted
+        event.preventDefault();
+      }
+    })
+    
+    
+  </script>
+
+</body>
+</html>
+
+  
