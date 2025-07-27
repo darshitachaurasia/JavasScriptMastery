@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Progress Bar</title>
+</head>
+<body>
+
+  <!-- Content to make the page scrollable -->
+  <div style="height: 2000px;">
+    <p>Scroll down the page</p>
+  </div>
+
+  <!-- Progress bar at the top -->
+  <div id="progressBar" style="width: 0%; height: 20px; background-color: green;"></div>
+
+  <script>
+     window.addEventListener('scroll', function() {
+      // Get the current scroll position
+      const scrollPosition = window.scrollY;
+
+      // Get the total scrollable height of the document
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+      // Calculate the progress as a percentage
+      const progress = (scrollPosition / totalHeight) * 100;
+
+      // Set the width of the progress bar based on the scroll progress
+      document.getElementById('progressBar').style.width = progress + '%';
+     })
+  </script>
+
+</body>
+</html>
+
+  

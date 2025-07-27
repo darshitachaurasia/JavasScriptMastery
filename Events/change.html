@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Validation Example</title>
+</head>
+<body>
+
+  <!-- Input field for email -->
+  <input type="email" id="email" placeholder="Enter your email">
+
+  <script>
+    // Get the email input field by its ID
+ const mail = document.getElementById('email') 
+ email = mail.value
+ email.addEventListener('change',()=>{
+    if(email.includes('@')||email.includes('.com')){
+      alert(email)
+    }else{
+        alert('wrong format')
+    }
+ }) 
+  </script>
+
+</body>
+</html>
+
+
+  

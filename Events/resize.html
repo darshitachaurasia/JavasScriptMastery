@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Text Example</title>
+</head>
+<body>
+
+  <!-- Text that will change size based on window width -->
+  <p id="responsiveText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium veritatis enim tempora facilis accusamus aspernatur magnam assumenda mollitia eos provident cumque quam hic repellendus eaque, quibusdam voluptatibus iste. Modi illo in cum, impedit labore consequatur. Eligendi, sint vitae fugit excepturi a officia corporis hic eius, fuga ea voluptatibus delectus nihil et deleniti illo labore sed nostrum accusantium earum. Nesciunt minus distinctio enim repellendus voluptatem nihil et provident voluptates impedit exercitationem modi qui saepe vel ratione in necessitatibus, beatae porro? Ad aliquam nulla veritatis sed, fugiat sequi id tempore provident quo obcaecati quos odit adipisci, doloribus molestias porro, fuga harum blanditiis?</p>
+
+  <script>
+   window.addEventListener('resize', function() {
+      // Get the current width of the window
+      const width = window.innerWidth;
+
+      // Calculate the text size based on the window width
+      const textSize = width / 10; 
+
+      // Adjust text size based on window width
+      document.getElementById('responsiveText').style.fontSize = textSize + 'px';
+   })
+  </script>
+
+</body>
+</html>
+
+  

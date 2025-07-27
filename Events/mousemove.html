@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Coordinates Example</title>
+</head>
+<body>
+  <p>Move the mouse around the screen!</p>
+  <p id="coordinates">X: 0, Y: 0</p>
+
+  <script>
+    // Event listener for the 'mousemove' event
+   //Your code here
+   const mouse = document.getElementById("coordinates")
+   mouse.addEventListener('mousemove',(e)=>{
+     console.log(e.movementX)
+      console.log(e.movementY)
+   })
+  </script>
+
+</body>
+</html>
+
+  
